@@ -1,0 +1,98 @@
+.video-landing-text a {
+    z-index: 42 !important;
+    display: flex;
+    font-size: 60px;
+    font-family: '911 Porscha Title', 'Jamiroquai', sans-serif;
+    color: whitesmoke;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 97%;
+    transform: scaleY(.63);
+    text-align: center;
+    margin: 10% 0;
+    min-height: 570px;
+    align-items: center;
+
+
+    animation-name: blur-in-out;
+    animation-duration: 8s;
+    animation-direction: regular;
+    animation-iteration-count: infinite;
+
+}
+
+@keyframes blur-in-out {
+    0% {
+        filter: blur(0.8px);
+    }
+
+    25% {
+        filter: blur(1.3px)
+    }
+
+    30% {
+        filter: blur(2.7px)
+    }
+
+    35% {
+        filter: blur(1.7px)
+    }
+
+    75% {
+        filter: blur(1.1px)
+    }
+
+    100% {
+        filter: blur(0.9px)
+    }
+}
+
+
+
+.video-wrapper {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: -100;
+
+}
+
+.bg-video-player {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    width: auto;
+    height: auto;
+    min-width: 100%;
+    min-height: 100%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+
+@media (max-width: 767px) {
+
+
+    .bg-video-player {
+        display: none;
+    }
+}
+
+
+.video-overlay {
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: black;
+    position: absolute;
+    opacity: .13;
+}
